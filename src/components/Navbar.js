@@ -15,12 +15,14 @@ const Nav = styled('div')`
   height: 80px;
   padding-left: 30px;
   padding-right: 30px;
-  z-index: 2;
+  z-index: 4;
   background-color: #fff;
 
   -webkit-box-shadow: 3px 2px 33px -10px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 3px 2px 33px -10px rgba(0, 0, 0, 0.2);
   box-shadow: 3px 2px 33px -10px rgba(0, 0, 0, 0.2);
+
+  
 `;
 
 const NavLink = styled('a')`
@@ -39,7 +41,7 @@ export default class Navbar extends Component {
     return (
       <Nav>
         <UI.Logo>We Love Code</UI.Logo>
-        <UI.FlexRowCenter>
+        <UI.FlexRowCenter className="hide-mobile">
           <NavLink href="/">Curriculum</NavLink>
           <NavLink href="/">My account</NavLink>
           <UI.Button type="primary">Schedule a session</UI.Button>

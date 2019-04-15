@@ -15,6 +15,85 @@ export const LessonMenu = styled('div')`
     overflow-y: scroll;
     background-color: #FFF;
     border-right: 1px solid ${theme.colors.lightGrey};
+    z-index: 2;
+
+    @media (max-width: 900px) {
+      display: none;
+
+      &.menu-open {
+        display: block;
+      }
+    }
+`;
+
+export const CloseMenu = styled('div')`
+  height: 75px;
+  width: 75px;
+  background-color: #111;
+  color: #fff;
+  letter-spacing: 1px;
+  border-radius: 75px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  cursor: pointer;
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+`;
+
+export const MenuIcon = styled('div')`
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  letter-spacing: 1px;
+
+  img {
+    height: 20px;
+  }
+`;
+
+export const MenuBackground = styled('div')`
+  z-index: 1;
+  background-color: rgba(01, 01, 01, 0.5);
+  position: fixed;
+  top: 80px;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+
+  display: none;
+
+  &.menu-open {
+    display: block;
+  }
+
+  @media (min-width: 901px) {
+    display: none !important;
+  }
+`;
+
+export const LessonMenuMobile = styled('div')`
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    padding: 0px;
+    padding-top: 60px;
+    top: 80px;
+    bottom 0;
+    background-color: #FFF;
+    border-right: 1px solid ${theme.colors.lightGrey};
+
+    .menu-open {
+      display: none;
+    }
 `;
 
 export const LessonSection = styled('div')`
@@ -99,6 +178,14 @@ export const LessonPost = styled('div')`
     height: 1px;
     background-color: #d2d2d2;
   }
+
+  @media (max-width: 900px) {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 720px;
+    padding: 18px;
+    padding-left: 78px;
+  }
 `;
 
 export const Logo = styled('h1')`
@@ -135,4 +222,10 @@ export const Button = styled('button')`
 export const FlexRowCenter = styled('div')`
   display: flex;
   align-items: center;
+
+  @media (max-width: 900px) {
+    &.hide-mobile {
+      display: none;
+    }
+  }
 `;

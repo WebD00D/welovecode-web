@@ -5,12 +5,15 @@ import Navbar from './components/Navbar';
 import * as UI from './theme/UI';
 import * as CURRICULUM from './curriculum/data';
 
+import ArrowSVG from './assets/arrow.svg';
+
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       markdown: '',
-      path: ''
+      path: '',
+      menuOpen: false
     };
   }
 
@@ -51,7 +54,10 @@ class App extends Component {
             <li>
               <a
                 className={this.state.path === l.path ? 'active' : null}
-                onClick={e => this.setDocument(e, l.path)}
+                onClick={e => {
+                  this.setDocument(e, l.path);
+                  this.setState({ menuOpen: false });
+                }}
                 href="#"
               >
                 {l.name}
@@ -72,11 +78,31 @@ class App extends Component {
   }
 
   render() {
+    const menuClass = this.state.menuOpen ? 'menu-open' : null;
+
     return (
       <div className="App">
         <Navbar />
         <UI.LayoutContainer>
-          <UI.LessonMenu>{this.buildNavigation()}</UI.LessonMenu>
+          {this.state.menuOpen ? (
+            <UI.CloseMenu
+              onClick={() => this.setState({ menuOpen: false })}
+              className={menuClass}
+            >
+              CLOSE
+            </UI.CloseMenu>
+          ) : null}
+
+          <UI.MenuBackground className={menuClass} />
+          <UI.LessonMenuMobile className={menuClass}>
+            <UI.MenuIcon onClick={() => this.setState({ menuOpen: true })}>
+              <img src={ArrowSVG} />
+              MENU
+            </UI.MenuIcon>
+          </UI.LessonMenuMobile>
+          <UI.LessonMenu className={menuClass}>
+            {this.buildNavigation()}
+          </UI.LessonMenu>
           <UI.LessonPost>
             <Markdown>{this.state.markdown}</Markdown>
           </UI.LessonPost>
