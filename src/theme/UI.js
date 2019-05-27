@@ -156,6 +156,11 @@ export const LessonPost = styled('div')`
     line-height: 1.7;
   }
 
+  li {
+    line-height: 2;
+    font-weight: 300;
+  }
+
   img {
     width: 100%;
   }
@@ -193,6 +198,7 @@ export const Logo = styled('h1')`
   font-size: 26px;
   color: ${theme.colors.black}
   letter-spacing: -1.5px;
+  text-decoration: none;
 `;
 
 export const Button = styled('button')`

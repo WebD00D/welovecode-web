@@ -7,48 +7,30 @@ export const curriculum = {
           name: 'HTML: The Skeleton of the Web',
           path: '1_HTML_CSS_FOUNDATIONS/1.MD'
         },
-        {
-          name: 'Semantic HTML Challenge',
-          path: '1_HTML_CSS_FOUNDATIONS/2.MD'
-        },
+        // {
+        //   name: 'Semantic HTML Challenge',
+        //   path: '1_HTML_CSS_FOUNDATIONS/2.MD'
+        // },
         {
           name: 'CSS: Bringing the Skeleton to Life',
           path: '1_HTML_CSS_FOUNDATIONS/3.MD'
         },
-        {
-          name: 'CSS Property Grouping Challenge',
-          path: '1_HTML_CSS_FOUNDATIONS/4.MD'
-        },
+        // {
+        //   name: 'CSS Property Grouping Challenge',
+        //   path: '1_HTML_CSS_FOUNDATIONS/4.MD'
+        // },
         {
           name: 'CSS Properites Challenge',
           path: '1_HTML_CSS_FOUNDATIONS/5.MD'
-        },
-        {
-          name: 'Writing Your Best Code',
-          path: '1_HTML_CSS_FOUNDATIONS/6.MD'
         }
       ]
     },
 
     2: {
-      unit: 'Chrome Dev Tools',
-      lessons: [
-        {
-          name: 'Using Chrome Developer Tools',
-          path: '2_CHROME_DEV_TOOLS/1.MD'
-        },
-        {
-          name: 'Chrome Dev Tools Challenge',
-          path: '2_CHROME_DEV_TOOLS/2.MD'
-        }
-      ]
-    },
-
-    3: {
       unit: 'Building Layouts',
       lessons: [
         {
-          name: 'Fundamentals of Building Layouts in CSS',
+          name: 'Building Layouts in CSS',
           path: '3_BUILDING_LAYOUTS/1.MD'
         },
         {
@@ -58,6 +40,20 @@ export const curriculum = {
         {
           name: 'Airbnb Homepage Project',
           path: '3_BUILDING_LAYOUTS/3.MD'
+        }
+      ]
+    },
+
+    3: {
+      unit: 'Chrome Dev Tools',
+      lessons: [
+        {
+          name: 'Using Chrome Developer Tools',
+          path: '2_CHROME_DEV_TOOLS/1.MD'
+        },
+        {
+          name: 'Chrome Dev Tools Challenge',
+          path: '2_CHROME_DEV_TOOLS/2.MD'
         }
       ]
     },

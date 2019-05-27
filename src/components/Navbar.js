@@ -21,8 +21,6 @@ const Nav = styled('div')`
   -webkit-box-shadow: 3px 2px 33px -10px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 3px 2px 33px -10px rgba(0, 0, 0, 0.2);
   box-shadow: 3px 2px 33px -10px rgba(0, 0, 0, 0.2);
-
-  
 `;
 
 const NavLink = styled('a')`
@@ -40,11 +38,12 @@ export default class Navbar extends Component {
   render() {
     return (
       <Nav>
-        <UI.Logo>We Love Code</UI.Logo>
+        <a style={{ textDecoration: 'none' }} href="/">
+          <UI.Logo>We Love Code</UI.Logo>
+          <span style={{color: '#252525', fontSize: '12px'}}>A Frontend Web Dev Crash Course</span>
+        </a>
         <UI.FlexRowCenter className="hide-mobile">
-          <NavLink href="/">Curriculum</NavLink>
-          <NavLink href="/">My account</NavLink>
-          <UI.Button type="primary">Schedule a session</UI.Button>
+          <UI.Button type="primary">Apply for mentorship</UI.Button>
         </UI.FlexRowCenter>
       </Nav>
     );
