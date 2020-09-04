@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "firebase": "^5.8.2",
-    "markdown-to-jsx": "^6.9.1",
+    "markdown-to-jsx": "^6.11.4",
     "mdx.macro": "^0.2.8",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
